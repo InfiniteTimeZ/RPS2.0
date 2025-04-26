@@ -12,6 +12,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("./images/backroom.png");
+    background-repeat: no-repeat;
+    background-size:100% 100vh;
+
+    
 }
 .main-div {
     display: flex;
@@ -25,6 +30,8 @@ body{
     flex-direction: column;
     align-items: center;
     transition: transform 1s ease-in-out;
+    color:white;
+    font-weight: bold;
 
 }
 .PLAY-BUTTON-NEXT-PAGE{
@@ -36,31 +43,34 @@ body{
     font-size: 100px;
     width: 850px;
     text-align: center;
-}
-.title-div:hover{
+    margin-bottom: 30px;
     animation: left-right-jumping 3.5s ease-in-out forwards infinite;
+}
+.RPS-Title:hover{
+   
 
 }
 @keyframes left-right-jumping{
-    0%{
-        transform: rotate(10deg);
-
-    }
-    20%{
-        transform: rotate(-10deg);
-    }
-    40%{
-        transform: rotate(10deg);
-    }
-    60%{
-        transform: rotate(-10deg);
-    }
-    80%{
-        transform: rotate(10deg);
-    }
+   20%{
+    transform: rotate(-10deg);
+   }
+   30%{
+    transform: rotate(10deg);
+   }
+   40%{
+    transform: rotate(-10deg);
+   }
+   50%{
+    transform: rotate(10deg);
+   }
+   60%{
+    transform: rotate(-10deg);
+   }
+   70%{
+    transform: rotate(10deg);
+   }
+   80%{
+    transform: rotate(-10deg);
+   }
     
-    100%{
-        transform: rotate(-10deg);
-
-     }
 }
