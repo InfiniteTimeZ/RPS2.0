@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
-    <script src="../script.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="main-game-div">
         <div class="points-player-computer">
             <h1>Score</h1>
-            <h2> 0 : 0</h2>
+            <h2 class="header-num-2"><p id="playerScore">0</p> : <p id="computerScore">0</p> </h2>
         </div>
         <div class="player-selection">
-            <button class="rock">Rock</button>
-            <button class="paper">Paper</button>
-            <button class="Scissors">Scissors</button>
+            <button id="rock" class="rock">Rock</button>
+            <button id="paper" class="paper">Paper</button>
+            <button id="scissors" class="Scissors">Scissors</button>
         </div>
-        <p class="commentary">You Won!</p>
+        <p id="commentary" class="commentary">You Won!</p>
         <a href="../index.html">  <button class="quit">QUIT</button></a>
     </div>
     
 </body>
+<script src="../script.js"></script>
 </html>

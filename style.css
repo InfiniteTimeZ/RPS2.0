@@ -175,7 +175,7 @@ body{
     height: 250px;
     border:none;
     font-size: 40px;
-    
+
     
 }
 .quit{
@@ -184,4 +184,7 @@ body{
 }
 .commentary{
     font-size: 40px;
+}
+.header-num-2{
+    display: flex;
 }
