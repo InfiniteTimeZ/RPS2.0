@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <audio id="doomcore" src="../music/Matryoshka II.mp3"></audio>
     <div class="main-game-div">
         <div class="points-player-computer">
             <h1>Score</h1>
-            <h2 class="header-num-2"><p id="playerScore">0</p> : <p id="computerScore">0</p> </h2>
+            <h2 id="changeAnimation" class="header-num-2"><p id="playerScore">0</p> : <p id="computerScore">0</p> </h2>
         </div>
         <div class="player-selection">
             <button id="rock" class="rock">Rock</button>
             <button id="paper" class="paper">Paper</button>
             <button id="scissors" class="Scissors">Scissors</button>
         </div>
-        <p id="commentary" class="commentary">You Won!</p>
+        <p id="commentary" class="commentary">You Won!</p><p class="" id="winCounter"></p>
         <a href="../index.html">  <button class="quit">QUIT</button></a>
+        <button class="play-pause" id="play-pause">Pause</button>
     </div>
-    
+    <script src="../script.js"></script>
 </body>
-<script src="../script.js"></script>
 </html>

@@ -175,12 +175,17 @@ body{
     height: 250px;
     border:none;
     font-size: 40px;
-
-    
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
 }
+ 
 .quit{
     width:60px;
-    height: 20px
+    height: 20px;
+    border:none;
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    
 }
 .commentary{
     font-size: 40px;
@@ -188,3 +193,12 @@ body{
 .header-num-2{
     display: flex;
 }
+.play-pause{
+    align-self: flex-end;
+    border:none;
+    padding:5px;
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    margin-right: 10px;
+}
+ 

@@ -1,7 +1,7 @@
  
 let playerScore = 0;
 let computerScore = 0;
-
+let winCounter = 0;
 
 
 function getComputerChoice(){
@@ -14,12 +14,18 @@ function getComputerChoice(){
 const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
+const playMusic = document.getElementById("doomcore");
+const pauseNplay = document.getElementById("play-pause");
+const scoreAnimation = document.getElementById("changeAnimation");
+ play();
+
 
 rockButton.addEventListener("click", function(){
     let userInput = 1;
     console.log("User Number: " + userInput);
     let computerCoice = getComputerChoice();
     compareInput(userInput, computerCoice);
+    checkScores();
     return userInput;
 
 });
@@ -28,6 +34,7 @@ paperButton.addEventListener("click", function(){
     console.log("User Number: " + userInput);
     let computerCoice = getComputerChoice();
     compareInput(userInput, computerCoice);
+    checkScores();
     return userInput;
  });
 scissorsButton.addEventListener("click", function(){
@@ -35,6 +42,7 @@ scissorsButton.addEventListener("click", function(){
     console.log("User Number: " + userInput);
     let computerCoice = getComputerChoice();
     compareInput(userInput, computerCoice);
+    checkScores();
     return userInput;
 });
 
@@ -66,19 +74,51 @@ function compareInput(userInput, num){
         default:
             console.log("hi how are you here?");
             break;
+    }
 
+         
+    
+}
+function checkScores(){
+    switch (true){
+        case (playerScore >= 5):
+            playerScore = 0;
+            computerScore = 0;
+            document.getElementById("computerScore").innerHTML = computerScore;
+            document.getElementById("playerScore").innerHTML = playerScore;
+            document.getElementById("commentary").innerHTML = "Player Won The Game!";
+            stop();
+        break;
+        case (computerScore >= 5):
+            playerScore = 0;
+            computerScore = 0;
+            document.getElementById("computerScore").innerHTML = computerScore;
+            document.getElementById("playerScore").innerHTML = playerScore;
+            document.getElementById("commentary").innerHTML = "Computer Won The Game!";
+            stop();
     }
-    if (playerScore == 3 ){
-        document.getElementById("commentary").innerHTML = "You won the Game!";
-        computerScore = 0;
-        playerScore = 0;
-    }
-    if (computerScore == 3){
-        document.getElementById("commentary").innerHTML = "You lost the Game!";
-        computerScore = 0;
-        playerScore = 0;
-    }
+    
+    
 }
 
+function play(){
+    playMusic.play();
+}
+function pause(){
+    playMusic.pause();
+
+}
+
+pauseNplay.addEventListener("click", function(){
+    if( document.getElementById("play-pause").innerHTML == "Pause"){
+        pause();
+        console.log("hi");
+        document.getElementById("play-pause").innerHTML = "Play"
+    }
+    else if( document.getElementById("play-pause").innerHTML == "Play"){
+        play();
+        document.getElementById("play-pause").innerHTML = "Pause";
+    }
+});
 
  
