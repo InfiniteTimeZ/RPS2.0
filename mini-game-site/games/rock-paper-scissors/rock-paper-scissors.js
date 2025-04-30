@@ -15,9 +15,8 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 const playMusic = document.getElementById("doomcore");
-const pauseNplay = document.getElementById("play-pause");
 const scoreAnimation = document.getElementById("changeAnimation");
- play();
+
 
 
 rockButton.addEventListener("click", function(){
@@ -101,24 +100,3 @@ function checkScores(){
     
 }
 
-function play(){
-    playMusic.play();
-}
-function pause(){
-    playMusic.pause();
-
-}
-
-pauseNplay.addEventListener("click", function(){
-    if( document.getElementById("play-pause").innerHTML == "Pause"){
-        pause();
-        console.log("hi");
-        document.getElementById("play-pause").innerHTML = "Play"
-    }
-    else if( document.getElementById("play-pause").innerHTML == "Play"){
-        play();
-        document.getElementById("play-pause").innerHTML = "Pause";
-    }
-});
-
- 

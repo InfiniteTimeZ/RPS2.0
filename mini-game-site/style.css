@@ -193,12 +193,3 @@ body{
 .header-num-2{
     display: flex;
 }
-.play-pause{
-    align-self: flex-end;
-    border:none;
-    padding:5px;
-    border-radius: 8px;
-    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-    margin-right: 10px;
-}
- 
